@@ -1,0 +1,82 @@
+// GENERAL PROJECT STYLES
+
+.head {
+	margin-top: 70px;
+	margin-bottom: 96px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	@media (max-width: $md2) {
+	}
+
+	@media (max-width: $md2) {
+		flex-direction: column;
+	}
+	@media (max-width: $md3) {
+		margin-top: 50px;
+		margin-bottom: 80px;
+	}
+
+	&__title {
+		@include adpc(833, 1280);
+		@media (max-width: $md2) {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+	}
+}
+.head__link {
+	@media (max-width: $md2) {
+		margin: auto;
+	}
+}
+.heading-1 {
+	font-style: normal;
+	font-weight: 600;
+	@include adaptive-value("font-size", 50, 26);
+	line-height: 130%;
+	letter-spacing: -3.6px;
+	@media (max-width: $md2) {
+		letter-spacing: -1px;
+	}
+
+	& span {
+		color: $accent;
+		padding-right: 10px;
+		display: inline-block;
+	}
+}
+.heading-2 {
+	margin-bottom: 56px;
+	display: block;
+	font-style: normal;
+	font-weight: 600;
+	@include adaptive-value("font-size", 50, 24);
+	line-height: 130%;
+	letter-spacing: -3.6px;
+	color: $textcolor;
+
+	@media (max-width: $md2) {
+		letter-spacing: -0.1px;
+	}
+	// @media (max-width: $md3) {
+	// 	// margin-bottom: 40px;
+	// }
+
+	& span {
+		color: $accent;
+		padding-right: 10px;
+		display: inline-block;
+	}
+}
+
+.bnr-img {
+	overflow: hidden;
+	border-radius: 20px;
+
+	// & img {
+	// 	background-color: #f0f0f0;
+	// }
+}

@@ -1,0 +1,24 @@
+.thank-notes__slider {
+	height: 320px;
+	overflow: hidden;
+}
+.thank-notes__slider.slick-initialized {
+	height: auto;
+	overflow: visible;
+}
+
+.thank-notes__slider {
+	margin: 0 -10px;
+}
+.thank-notes__slider .slick-slide {
+	padding: 0 10px;
+}
+
+.thank-notes__slider-card {
+	max-height: 334px;
+	// display: block;
+
+	@media (max-width: $md3) {
+		max-height: inherit;
+	}
+}

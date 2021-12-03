@@ -1,0 +1,55 @@
+@mixin adaptive-value($property, $desktop, $mob) {
+	$addSize: $desktop - $mob;
+	$addMobileSize: $addSize + $addSize * 0.7;
+
+	@media (max-width: 320px) {
+		font-size: $mob + px;
+	}
+
+	@media (max-width: $md3) {
+		#{$property}: calc(
+			#{$mob + px} + #{$addMobileSize} *
+				((100vw - 320px) / #{$maxWidthContainerPX})
+		);
+	}
+
+	@media (min-width: $md3) {
+		#{$property}: calc(
+			#{$mob + px} + #{$addSize} * (100vw / #{$maxWidthContainerPX})
+		);
+	}
+
+	@media (min-width: ($maxWidthContainerPX + px)) {
+		#{$property}: $desktop + px;
+	}
+}
+
+@mixin adpc($size, $container) {
+	width: math.div($size, $container) * 100%;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {
+		@content;
+	}
+
+	:-moz-placeholder {
+		@content;
+	}
+
+	::-moz-placeholder {
+		@content;
+	}
+
+	:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin not-last {
+	& > * {
+		&:not(:last-child) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,106 @@
+.transportation-slider {
+	height: 232px;
+	overflow: hidden;
+}
+.transportation-slider.slick-initialized {
+	height: auto;
+	overflow: visible;
+}
+
+.transportation-slider {
+	margin: 0 -10px;
+}
+.transportation-slider .slick-slide {
+	padding: 0 10px;
+}
+
+.transportation-slider .slick-arrow,
+.suitable-trawl-slider .slick-arrow,
+.our-experience__slider .slick-arrow,
+.our-clients__slider .slick-arrow,
+.thank-notes__slider .slick-arrow {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	appearance: none;
+	border: 0;
+	margin: 0;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: visible;
+	vertical-align: middle;
+	line-height: 1;
+	background-origin: border-box;
+
+	background-color: $white;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+
+	@media (max-width: 1400px) {
+		z-index: 1;
+	}
+
+	@media (max-width: 1400px) {
+		top: initial;
+		bottom: -50px;
+		transform: initial;
+	}
+}
+
+.our-experience__slider .slick-arrow {
+	top: 41%;
+	@media (max-width: 1400px) {
+		top: initial;
+	}
+}
+
+.transportation-slider .transportation-slider__prev-arrow,
+.suitable-trawl-slider .suitable-trawl-slider__prev-arrow,
+.our-experience__slider .our-experience__slider__prev-arrow,
+.our-clients__slider .our-clients__slider__prev-arrow,
+.thank-notes__slider .thank-notes__slider__prev-arrow {
+	background-image: url(../images/dist/chevron-left.svg);
+	left: -29px;
+
+	@media (max-width: 1400px) {
+		left: 10px;
+	}
+}
+
+.suitable-trawl-slider .suitable-trawl-slider__prev-arrow {
+	left: -24px !important;
+	@media (max-width: 1400px) {
+		left: 10px !important;
+	}
+}
+.suitable-trawl-slider .suitable-trawl-slider__next-arrow {
+	right: -24px !important;
+	@media (max-width: 1400px) {
+		right: 10px !important;
+	}
+}
+
+.transportation-slider .transportation-slider__next-arrow,
+.suitable-trawl-slider .suitable-trawl-slider__next-arrow,
+.our-experience__slider .our-experience__slider__next-arrow,
+.our-clients__slider .our-clients__slider__next-arrow,
+.thank-notes__slider .thank-notes__slider__next-arrow {
+	background-image: url(../images/dist/chevron-right.svg);
+	right: -29px;
+
+	@media (max-width: 1400px) {
+		right: 10px;
+	}
+}

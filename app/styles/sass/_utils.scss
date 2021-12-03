@@ -1,0 +1,13 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -10px;
+}
+
+.coll {
+	padding: 0 10px;
+	position: relative;
+	min-height: 0.1rem;
+	box-sizing: border-box;
+	word-wrap: break-word;
+}

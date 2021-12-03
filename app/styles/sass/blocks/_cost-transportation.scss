@@ -1,0 +1,166 @@
+.cost-transportation__table {
+	margin-bottom: 20px;
+}
+.cost-transportation__row {
+	text-align: center;
+}
+.table {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	& .row-table:nth-child(odd) {
+		background: #f2f2f2;
+	}
+
+	@media (max-width: $md2) {
+		display: block;
+		max-width: 100%;
+	}
+
+	& .row-table:nth-child(odd) {
+		background: #f2f2f2;
+	}
+}
+
+.row-table {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	padding: 31px 29px 31px;
+	border-radius: 10px;
+
+	@media (max-width: $md2) {
+		display: block;
+		padding: 20px;
+		& > *:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.cell-table--first {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 150%;
+	letter-spacing: -0.8px;
+	color: $black;
+}
+
+.cell-table--two {
+	font-size: 18px;
+	letter-spacing: 0.3px;
+	color: $black;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 150%;
+	text-align: center;
+	padding: 0 20px;
+
+	@media (max-width: $md2) {
+		padding: 0;
+	}
+}
+
+.cell-table--three {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 150%;
+	letter-spacing: 0.3px;
+	text-align: right;
+}
+
+.table-two-coll {
+	& .cell-table {
+		flex-grow: 1;
+	}
+	& .cell-table--first {
+		padding-right: 20px;
+
+		@media (max-width: $md2) {
+			padding-right: 0;
+		}
+	}
+	& .cell-table--three {
+		text-align: right;
+		color: $accent;
+		padding-left: 20px;
+
+		@media (max-width: $md2) {
+			padding-left: 0;
+		}
+	}
+}
+
+.table-three-coll {
+	& .cell-table--first {
+		max-width: 330px;
+	}
+	& .cell-table--two {
+		flex-grow: 1;
+	}
+
+	& .cell-table--three {
+		max-width: 245px;
+		color: $accent;
+	}
+}
+
+.table-four-coll {
+	& .cell-table {
+		flex-grow: 1;
+	}
+	& .cell-table--three {
+		text-align: center;
+		font-size: 18px;
+		letter-spacing: 0.3px;
+		color: $black;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 150%;
+		text-align: center;
+		padding: 0 20px;
+
+		@media (max-width: $md2) {
+			padding: 0;
+		}
+	}
+	& .cell-table--four {
+		text-align: right;
+		color: $accent;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 22px;
+		line-height: 150%;
+		letter-spacing: 0.3px;
+		text-align: right;
+		padding-left: 20px;
+		padding-right: 0;
+
+		@media (max-width: $md2) {
+			padding: 0;
+		}
+	}
+}
+
+.cell-table--first,
+.cell-table--two,
+.cell-table--three,
+.cell-table--four {
+	@media (max-width: $md2) {
+		display: block;
+		max-width: 100% !important;
+		text-align: left !important;
+	}
+}
+.cell-table--two,
+.cell-table--three,
+.cell-table--four {
+	@media (max-width: $md3) {
+		font-size: 16px !important;
+	}
+}
